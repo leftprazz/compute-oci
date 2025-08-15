@@ -9,8 +9,10 @@ terraform {
 }
 
 provider "oci" {
-  region = "ap-batam-1"
+  config_file_profile = "DEFAULT"
+  region              = "ap-batam-1"
 }
+
 
 module "compute_a1" {
   source = "./modules/compute-oci"
